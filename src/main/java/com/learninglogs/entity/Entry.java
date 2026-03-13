@@ -52,6 +52,12 @@ public class Entry {
     //
     // Hint: private int id;
     // ============================================================
+    //Todo 1
+    private int id;
+    private String text;
+    private int topicId;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
 
 
 
@@ -75,6 +81,11 @@ public class Entry {
     //       this.topicId = topicId;
     //   }
     // ============================================================
+    // Todo 2
+    public Entry(String text, int topicId){
+        this.text = text;
+        this.topicId = topicId;
+    }
 
 
 
@@ -101,6 +112,14 @@ public class Entry {
     //       this.updatedAt = updatedAt;
     //   }
     // ============================================================
+    //todo 3
+    public Entry(int id,String text,int topicId,Timestamp createdAt,Timestamp updatedAt){
+        this.id=id;
+        this.text= text;
+        this.topicId= topicId;
+        this.createdAt= createdAt;
+        this.updatedAt= updatedAt;
+    }
 
     // ============================================================
     // TODO 4: Create getters and setter (+20 XP)
@@ -115,33 +134,35 @@ public class Entry {
     //
     // Hint: return this.id;
     // ============================================================
+    //todo 4
     public int getId() {
         // Write your code here
-        return 0;
+        return id;
     }
 
     public String getText() {
         // Write your code here
-        return null;
+        return text;
     }
 
     public int getTopicId() {
         // Write your code here
-        return 0;
+        return topicId;
     }
 
     public Timestamp getCreatedAt() {
         // Write your code here
-        return null;
+        return createdAt;
     }
 
     public Timestamp getUpdatedAt() {
         // Write your code here
-        return null;
+        return updatedAt;
     }
 
     public void setText(String text) {
         // Write your code here
+        this.text = text;
     }
 
     // ============================================================
@@ -160,6 +181,6 @@ public class Entry {
     @Override
     public String toString() {
         // Write your code here
-        return "";
+        return "[" + id + "] " + text + " (Topic ID: " + topicId + ", Created: " + createdAt + ")";
     }
 }
